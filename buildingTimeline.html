@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>The life and times of Dr. Edouard S. Luboff</title>
+  <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+  <style>
+        * {
+      box-sizing: border-box;
+      }
+
+      /* Set a background color */
+      body {
+      font-family: Helvetica, sans-serif;
+      }
+
+      strong {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      /* The actual timeline (the vertical ruler) */
+      .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      }
+
+      /* The actual timeline (the vertical ruler) */
+      .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: grey;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      }
+
+      /* Container around content */
+      .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+      }
+
+      /* The circles on the timeline */
+      .container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: white;
+      border: 4px solid rgba(160,17,47,0.8);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+      }
+
+      /* Place the container to the left */
+      .left {
+      left: 0;
+      }
+
+      /* Place the container to the right */
+      .right {
+      left: 50%;
+      }
+
+      /* Add arrows to the left container (pointing right) */
+      .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent lightgrey;
+      }
+
+      /* Add arrows to the right container (pointing left) */
+      .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent lightgrey transparent transparent;
+      }
+
+      /* Fix the circle for containers on the right side */
+      .right::after {
+      left: -16px;
+      }
+
+      /* The actual content */
+      .boxContent {
+      padding: 20px 30px;
+      background-color: lightgrey;
+      position: relative;
+      border-radius: 6px;
+      }
+
+      /* Media queries - Responsive timeline on screens less than 600px wide */
+      @media screen and (max-width: 600px) {
+      /* Place the timelime to the left */
+      .timeline::after {
+      left: 31px;
+      }
+
+      /* Full-width containers */
+      .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+      }
+
+      /* Make sure that all arrows are pointing leftwards */
+      .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+      }
+
+      /* Make sure all circles are at the same spot */
+      .left::after, .right::after {
+      left: 15px;
+      }
+
+      /* Make all right containers behave like the left ones */
+      .right {
+      left: 0%;
+      }
+      }
+  </style>
+</head>
+<body>
+  <script src="./resources/js/script.js"></script>
+  <!-- HEADER AND TITLE -->
+    <h1>The life and times of Dr. Edouard S. Luboff
+    <br><span class="headersubtext">A short history of an economist, a political commentator and journalist, an author and publisher on Russian affairs</span></h1>
+  <!-- END OF HEADER AND TITLE -->
+  <!--START OF NAVBAR - EDIT class="active-page" -->
+    <div class="navbar" id="myHeader">
+        <!--Use class "current-page" to highlight current page as per https://stackoverflow.com/questions/26819675/navbar-highlight-for-current-page -->
+      <a href="./index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">About this page
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <!--Need some conditions to wrap lengthy text-->
+            <a href="./foreword.html">Foreword</a>
+            <a href="./acknowledgements.html">Acknowledgements</a>
+            <a href="./context.html">Context - the Russian Revolution years 1917-1924</a>
+            <a href="./approach.html">Approach to research</a>
+            <a href="./bibliography.html">Bibliography</a>
+            <!-- Here we want another sub-menu for "building the profile" etc-->
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Building research
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="./buildingTimeline.html" class="current-page">Building the timeline</a>
+            <a href="./buildingProfile.html">Building the profile</a>
+          </div>
+      </div>
+        <div class="dropdown">
+          <button class="dropbtn">Edouard as...
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="./editor.html">...an editor and publisher</a>
+            <a href="./author.html">...an author</a>
+            <a href="./journalist.html">...a journalist and press correspondent</a>
+            <a href="./speaker.html">...a public speaker</a>
+            <a href="./family.html">...a family man</a>
+          </div>
+      </div>
+  <a href="./contact.html">Contact</a>
+    </div>
+<!--END OF NAVBAR -->
+  <div class="content">
+    <h2>Building the timeline</h2>
+    <p>Using the information collated during the secondary research phase I have put together the following time line for Edouard. Frustratingly, it is far from complete and also includes a number of rather ‘heroic’assumptions.</p>
+    <p>So very much still work-in-progress.</p>
+    <div class="timeline">
+      <div class="container right">
+        <div class="boxContent">
+          <h3>1877</h3>
+          <p><strong>Born</strong> Still unsure whether he was born in Georgia, perhaps more likely he could have been a Russian born in Georgia?</p>
+          <p><em>Evidence source: Death certificate showing he died in 1947 at the age of 70</em></p>
+          <p>[Prisoner of the Czar] ?? – we know he fought the Czarist regime but know no more</p>
+          <p><em>Evidence source:</em></p>
+          <p>[Prisoner of the Bolsheviks] ?? INSERT IMAGE HERE Again, we know he fought actively against the Bolsheviks, was possibly a Menshavik himself, had been a prisoner at some point in time but we have no more detailed information about any imprisonment – where, duration and how he got out!</p>
+          <p><em>Evidence source:</em></p>
+        </div>
+        </div>
+          <div class="container left">
+            <div class="boxContent">
+              <h3>1914</h3>
+              <p>Working for the Russian Ministery of Interior ???</p>
+              <p><em>Evidence source:</em></p>
+            </div>
+          </div>
+
+      <div class="container right">
+        <div class="boxContent">
+          <h3>1914-1918</h3>
+          <p>[First World War] – Edouard was 37 at the start of WW1. Did he play an active role we wonder?</p>
+          <p><em>Evidence source:</em></p>
+        </div>
+        </div>
+          <div class="container left">
+            <div class="boxContent">
+              <h3>1916</h3>
+              <p>States that this was Edouard’s first visit to South Wales - this time as a Russo-British trade propagandist. Not clear where he was living at the time and exactly what his occupation was ?</p>
+              <p><em>Evidence source: The Russian Issue 40, pg 1 17/07/19</em></p>
+            </div>
+          </div>
+
+      <div class="container right">
+        <div class="boxContent">
+          <h3>Travels to England</h3>
+          <p>
+          <br><em>Evidence source:</em></p>
+        </div>
+        </div>
+          <div class="container left">
+            <div class="boxContent">
+              <h3>By early 1918?</h3>
+              <p>Arrived in England.<br>Would have been aged 40 at the time.</p>
+              <p><em>Evidence source:</em></p>
+            </div>
+          </div>
+
+      <div class="container right">
+        <div class="boxContent">
+          <h3>1918</h3>
+          <p>Founded “The Russian” – a weekly journal devoted to Russian Affairs  INSERT IMAGE HERE </p>
+          <p><em>Evidence source: The Russian 15/10/1918</em></p>
+        </div>
+        </div>
+          <div class="container left">
+            <div class="boxContent">
+              <h3>1919</h3>
+              <p>Wrote “Facts about Bolshevism”</p>
+              <p><em>Evidence source: Obtained copy of publication</em></p>
+            </div>
+          </div>
+
+      <div class="container right">
+        <div class="boxContent">
+          <h3>1919??</h3>
+          <p>Refers to Edouard “travelling, mostly on foot, through Siberia….. coming into close touch with numerous peasants and discussing with them various aspects of agriculture</p>
+          <p><em>Evidence source: The Russian “Siberian Agriculture” 07/08/1919</em></p>
+        </div>
+        </div>
+          <div class="container left">
+            <div class="boxContent">
+              <h3>1919-1928</h3>
+              <p>Regular public speaker at Town Hall and club meetings around the country</p>
+              <p><em>Evidence source: Copies of newspaper announcements and meeting reviews + The Russian</em></p>
+            </div>
+          </div>
+
+      <div class="container right">
+        <div class="boxContent">
+          <h3>1920</h3>
+          <p>Wrote “Bolshevik Russia” with GE Raine  INSERT IMAGE HERE </p>
+          <p><em>Evidence source: Obtained copy of publication</em></p>
+        </div>
+        </div>
+          <div class="container left">
+            <div class="boxContent">
+              <h3>1926-33</h3>
+              <p>Was a regular writer for the Daily Mail during the period 1926 – 33  INSERT IMAGE HERE </p>
+              <p><em>Evidence source: Obtained copies of the Daily Mail articles</em></p>
+            </div>
+          </div>
+
+      <div class="container right">
+        <div class="boxContent">
+          <h3>1926</h3>
+          <p>Wrote “A Red Year – The Soviets in 1926”  INSERT IMAGE HERE </p>
+          <p><em>Evidence source: Obtained copy of publication</em></p>
+        </div>
+        </div>
+          <div class="container left">
+            <div class="boxContent">
+              <h3>1927</h3>
+              <p>Son Andrei born – Edouard was 50 ! Birth certificate shows Edouard as a journalist living at 3 Gainsborough House, Aldine Street, London</p>
+              <p><em>Evidence source: Birth Certificate of Andrey [sic] Luboff</em></p>
+            </div>
+          </div>
+
+      <div class="container right">
+        <div class="boxContent">
+          <h3>1929</h3>
+          <p>Wrote “Can we trade with Russia?”  INSERT IMAGE HERE </p>
+          <p><em>Evidence source: Obtained copy of publication</em></p>
+        </div>
+        </div>
+          <div class="container left">
+            <div class="boxContent">
+              <h3>1931</h3>
+              <p>Wrote “Soviet Dumping”  INSERT IMAGE HERE </p>
+              <p><em>Evidence source: Obtained copy of publication</em></p>
+            </div>
+          </div>
+
+      <div class="container right">
+        <div class="boxContent">
+          <h3>1933</h3>
+          <p>Wrote “Russian Trade – a Constructive Policy”  INSERT IMAGE HERE </p>
+          <p><em>Evidence source: Obtained copy of publication</em></p>
+        </div>
+        </div>
+          <div class="container left">
+            <div class="boxContent">
+              <h3>1939-1945</h3>
+              <p>[Second World War]. Edouard was aged 62 at the start of WW”</p>
+              <p><em>Evidence source:</em></p>
+            </div>
+          </div>
+
+      <div class="container right">
+        <div class="boxContent">
+          <h3>1944-45??</h3>
+          <p>A picture of Edouard with G Evelyn Gates and their son Andrei at the age of say 17 or 18  INSERT IMAGE HERE </p>
+          <p><em>Evidence source: Picture of the three together</em></p>
+        </div>
+        </div>
+          <div class="container left">
+            <div class="boxContent">
+              <h3>1947</h3>
+              <p><strong>Death</strong>
+                <br>It would appear that he died at home at 58 Warwick Gardens, London, W14 [with his son in attendance]</p>
+                <p><em>Evidence source:</em></p>
+            </div>
+          </div>
+
+
+      <div class="container right">
+        <div class="boxContent">
+          <h3>1877</h3>
+          <p></p>
+          <p><em>Evidence source:</em></p>
+        </div>
+        </div>
+          <div class="container left">
+            <div class="boxContent">
+              <h3>2017</h3>
+              <p></p>
+              <p><em>Evidence source:</em></p>
+            </div>
+          </div>
+
+    </div>
+  </div>
+</body>
+</html>

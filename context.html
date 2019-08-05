@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<html>
+<!-- NEED TO SORT TIMELINE AND NAVBAR CLASHING -->
+<!-- SORT BLOCKQUOTE ISSUE -->
+<head>
+  <title>The life and times of Dr. Edouard S. Luboff</title>
+  <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+  <style>
+        * {
+      box-sizing: border-box;
+      }
+
+      /* Set a background color */
+      body {
+      font-family: Helvetica, sans-serif;
+      }
+
+      strong {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      /* The actual timeline (the vertical ruler) */
+      .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      }
+
+      /* The actual timeline (the vertical ruler) */
+      .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: grey;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      }
+
+      /* Container around content */
+      .container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+      }
+
+      /* The circles on the timeline */
+      .container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: white;
+      border: 4px solid rgba(160,17,47,0.8);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+      }
+
+      /* Place the container to the left */
+      .left {
+      left: 0;
+      }
+
+      /* Place the container to the right */
+      .right {
+      left: 50%;
+      }
+
+      /* Add arrows to the left container (pointing right) */
+      .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent lightgrey;
+      }
+
+      /* Add arrows to the right container (pointing left) */
+      .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent lightgrey transparent transparent;
+      }
+
+      /* Fix the circle for containers on the right side */
+      .right::after {
+      left: -16px;
+      }
+
+      /* The actual content */
+      .boxContent {
+      padding: 20px 30px;
+      background-color: lightgrey;
+      position: relative;
+      border-radius: 6px;
+      }
+
+      /* Media queries - Responsive timeline on screens less than 600px wide */
+      @media screen and (max-width: 600px) {
+      /* Place the timelime to the left */
+      .timeline::after {
+      left: 31px;
+      }
+
+      /* Full-width containers */
+      .container {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+      }
+
+      /* Make sure that all arrows are pointing leftwards */
+      .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+      }
+
+      /* Make sure all circles are at the same spot */
+      .left::after, .right::after {
+      left: 15px;
+      }
+
+      /* Make all right containers behave like the left ones */
+      .right {
+      left: 0%;
+      }
+      }
+  </style>
+</head>
+<body>
+  <script src="./resources/js/script.js"></script>
+  <!-- HEADER AND TITLE -->
+    <h1>The life and times of Dr. Edouard S. Luboff
+    <br><span class="headersubtext">A short history of an economist, a political commentator and journalist, an author and publisher on Russian affairs</span></h1>
+  <!-- END OF HEADER AND TITLE -->
+  <!--START OF NAVBAR - EDIT class="active-page" -->
+    <div class="navbar" id="myHeader">
+        <!--Use class "current-page" to highlight current page as per https://stackoverflow.com/questions/26819675/navbar-highlight-for-current-page -->
+      <a href="./index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">About this page
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <!--Need some conditions to wrap lengthy text-->
+            <a href="./foreword.html">Foreword</a>
+            <a href="./acknowledgements.html">Acknowledgements</a>
+            <a href="./context.html" class="current-page">Context - the Russian Revolution years 1917-1924</a>
+            <a href="./approach.html">Approach to research</a>
+            <a href="./bibliography.html">Bibliography</a>
+            <!-- Here we want another sub-menu for "building the profile" etc-->
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Building research
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="./buildingTimeline.html">Building the timeline</a>
+            <a href="./buildingProfile.html">Building the profile</a>
+          </div>
+      </div>
+        <div class="dropdown">
+          <button class="dropbtn">Edouard as...
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="./editor.html">...an editor and publisher</a>
+            <a href="./author.html">...an author</a>
+            <a href="./journalist.html">...a journalist and press correspondent</a>
+            <a href="./speaker.html">...a public speaker</a>
+            <a href="./family.html">...a family man</a>
+          </div>
+      </div>
+  <a href="./contact.html">Contact</a>
+    </div>
+<!--END OF NAVBAR -->
+  <div>
+    <div class="content">
+    <h2>Context - The Russian Revolution Years</h2>
+    <h3>Introduction</h3>
+    <p>To be able to fully appreciate and understand Edouard’s work it is important to add some context and colour to the period in which he was writing and to familiarise oneself with at least the bare bones of the key details and events of the 1917 revolutions.</p>
+    <p>This chapter aims to help the reader obtain this necessary background.</p>
+    <blockquote>***WHAT'S HAPPENING HERE??***The Russian Revolution of 1917 deposed the czar (in the February Revolution) and installed the Bolsheviks in power (in the October Revolution). After winning the civil war in Russia, the Bolsheviks established the Soviet Union in 1922.<sup>1</sup></blockquote>
+    <p>Technically we should really concern ourselves with three actual “Revolutions”:</p>
+    <ol>
+      <li>1905 Revolution</li>
+      <li>February 1917 Revolution</li>
+      <li>October 1917 Revolution</li>
+    </ol>
+    <p>INSERT IMAGE HERE</p>
+  </div>
+<!--CHANGE FORMATTING OF <h3> TAGS-->
+    <div class="timeline">
+                        <div class="container left">
+                      <div class="boxContent">
+                        <h3>1887</h3>
+                        <p><strong>May 8 <em>(May 20 NS)</em></strong> Lenin's brother, Alexander Ulyanov, is hanged for plotting to kill Czar Alexander III</p>
+                      </div>
+                    </div>
+                    <div class="container right">
+                      <div class="boxContent">
+                        <h3>1894</h3>
+                        <p><strong>October 20 <em>(November 1 NS)</em></strong> Czar Alexander III dies after a sudden illness and his son, Nicholas II, becomes the ruler of Russia</p>
+                        <p><strong>November 14 <em>(November 26 NS)</em></strong> Czar Nicholas II marries Alexandra Fedorovna</p>
+                      </div>
+                    </div>
+                      <div class="container left">
+                        <div class="boxContent">
+                          <h3>1895</h3>
+                          <p><strong>December 8 <em>(December 20 NS)</em></strong> Lenin is arrested, kept in solitary confinement for 13 months, and then exiled to Siberia for three years</p>
+                        </div>
+                      </div>
+                      <div class="container right">
+                        <div class="boxContent">
+                          <h3>1896</h3>
+                          <p><strong>May 14 <em>(May 26 NS)</em></strong> Nicholas II crowned czar of Russia</p>
+                        </div>
+                      </div>
+                        <div class="container left">
+                          <div class="boxContent">
+                            <h3>1903</h3>
+                            <p><strong>July 17 - August 10 <em>(July 30 - August 23 NS)</em></strong> The Russian Social-Democratic Labor Party (RSDLP) meeting in which the Party splits into two factions: Mensheviks ("minority") and Bolsheviks ("majority")</p>
+                          </div>
+                        </div>
+                        <div class="container right">
+                          <div class="boxContent">
+                            <h3>1904</h3>
+                            <p><strong>July 30 <em>(August 12 NS)</em></strong> After having four girls, Czarina Alexandra gives birth to a son, Alexei</p>
+                          </div>
+                        </div>
+                        <div class="container left">
+                          <div class="boxContent">
+                            <h3>1905 - Revolution</h3>
+                            <p><strong>January 9 <em>(January 22 NS)</em></strong> Bloody Sunday in St. Petersburg begins the 1905 Russian Revolution</p>
+                            <p><strong>October 17 <em>(October 30 NS)</em></strong> The October Manifesto, issued by Czar Nicholas II, brings an end to the 1905 Russian Revolution by promising civil liberties and an elected parliament (Duma)</p>
+                          </div>
+                        </div>
+                        <div class="container right">
+                          <div class="boxContent">
+                            <h3>1906</h3>
+                            <p><strong>April 23 <em>(May 6 NS)</em></strong> A constitution (the Fundamental Laws of 1906) is created, reflecting the promises made in the October Manifesto</p>
+                          </div>
+                        </div>
+                          <div class="container left">
+                            <div class="boxContent">
+                              <h3>1914</h3>
+                              <p><strong>July 15 <em>(July 28 NS)</em></strong> World War I begins</p>
+                            </div>
+                          </div>
+                          <div class="container right">
+                            <div class="boxContent">
+                              <h3>1915</h3>
+                              <p><strong>September 5 <em>(September 18 NS)</em></strong> Czar Nicholas II assumes supreme command of the Russian Army</p>
+                            </div>
+                          </div>
+                            <div class="container left">
+                              <div class="boxContent">
+                                <h3>1916</h3>
+                                <p><strong>December 17 <em>(December 30)</em></strong> Rasputin is murdered</p>
+                              </div>
+                            </div>
+                            <div class="container right">
+                              <div class="boxContent">
+                                <h3>1917</h3>
+                                <p><strong>February 23-27 <em>(March 8-12 NS)</em></strong> The February Revolution begins with strikes, demonstrations, and mutinies in Petrograd (also called the March Revolution if following the Gregorian calendar)</p>
+                                <p><strong>March 2 <em>(March 15 NS)</em></strong> Czar Nicholas II abdicates and includes his son. The following day, Nicholas' brother, Mikhail announced his refusal to accept the throne. Provisional Government formed</p>
+                                <p><strong>April 3 <em>(April 16 NS)</em></strong> Lenin returns from exile and arrives in Petrograd via a sealed train</p>
+                                <p><strong>July 3-7 <em>(July 16-20 NS)</em></strong> The July Days begin in Petrograd with spontaneous protests against the Provisional Government; after the Bolsheviks unsuccessfully try to direct these protests into a coup, Lenin is forced into hiding</p>
+                                <p><strong>July 11 <em>(July 24 NS)</em></strong> Alexander Kerensky becomes Prime Minister of the Provisional Government</p>
+                                <p><strong>August 22-27 <em>(September 4-9 NS)</em></strong> The Kornilov Affair, a failed coup by General Lavr Kornilov, commander of the Russian Army</p>
+                                <p><strong>October 25 <em>(November 7 NS)</em></strong> The October Revolution - the Bolsheviks take over Petrograd (also called the November Revolution if following the Gregorian calendar)</p>
+                                <p><strong>October 26 <em>(November 8 NS)</em></strong> The Winter Palace, the last holdout of the Provisional Government, is taken by the Bolsheviks; the Council of People's Commissars (abbreviated as Sovnarkom), led by Lenin, is now in control of Russia</p>
+                              </div>
+                            </div>
+                              <div class="container left">
+                                <div class="boxContent">
+                                  <h3>1918</h3>
+                                  <p><strong>February 1/14</strong> The new Bolshevik government converts Russia from the Julian to the Gregorian calendar turning February 1 into February 14</p>
+                                  <p><strong>March 3</strong> The Treaty of Brest-Litovsk, between Germany and Russia, is signed and takes Russia out of World War I</p>
+                                  <p><strong>March 8</strong> The Bolshevik Party changes its name to the Communist Party</p>
+                                  <p><strong>March 11</strong> The capital of Russia is changed from St. Petersburg to Moscow</p>
+                                  <p><strong>June</strong> Russian civil war begins</p>
+                                  <p><strong>July 17</strong> Czar Nicholas II and his family are executed</p>
+                                  <p><strong>August 30</strong> An assassination attempt leaves Lenin seriously wounded</p>
+                                </div>
+                              </div>
+                              <div class="container right">
+                                <div class="boxContent">
+                                  <h3>1920</h3>
+                                  <p><strong>November</strong> Russian civil war ends</p>
+                                </div>
+                              </div>
+                                <div class="container left">
+                                  <div class="boxContent">
+                                    <h3>1922</h3>
+                                    <p><strong>April 3</strong> Stalin is appointed General Secretary</p>
+                                    <p><strong>May 26</strong> Lenin suffers first stroke</p>
+                                    <p><strong>December 15</strong> Lenin suffers second stroke and retires from politics</p>
+                                    <p><strong>December 30</strong> The Union of Soviet Socialist Republics (U.S.S.R.) established</p>
+                                  </div>
+                                </div>
+                                <div class="container right">
+                                  <div class="boxContent">
+                                    <h3>1924</h3>
+                                    <p><strong>January 21</strong> Lenin dies; Stalin will become his successor</p>
+                                  </div>
+                                </div>
+                                  <div class="container left">
+                                    <div class="boxContent">
+                                      <h3>2017</h3>
+                                      <p>Lorem ipsum..</p>
+                                    </div>
+                                  </div>
+    </div>
+    <div class="content">
+      <p>The reader may find it interesting to review the following video clips on the Russian Revolution:</p>
+<!-- EMBED THESE VIDEOS? -->
+      <ul>
+        <li><a href="https://youtu.be/ZZ55ZvBe07U" target="_blank">Ten Minute History - The Russian Revolution (Short Documentary)</a> (YouTube)</li>
+        <li><a href="https://youtu.be/JpycUBpgWzU" target="_blank">The Russian Civil War: Every Other Day</a> (YouTube)</li>
+        <li><a href="https://youtu.be/-tvCfiLzee8" target="_blank">China Miéville on the Russian Revolution</a> (YouTube)</li>
+        <li><a href="https://youtu.be/cV9G1QUIm7w" target="_blank">The Russian Revolution 1917</a> (YouTube)</li>
+      </ul>
+      <p>[In this first edition I have only provided a time line up until 1924. In later editions I will extend the time line to the end of the Second World War.]</p>
+    </div>
+  <!--REFERENCES SECTION BELOW -->
+      <div class="references">
+        <h2>References</h2>
+        <ol class="references">
+          <li>Acknowledged thanks to <a href="https://www.thoughtco.com/jennifer-rosenberg-1778035" target="_blank">Jennifer Rosenberg of Thought & Co.</a> for this helpful timeline description.</li>
+          <li>N.B. <a href="https://www.thoughtco.com/russian-revolutions-introduction-1221814" target="_blank">Timelines of the Russian Revolution</a> are often confusing because up until February 1918 <a href="https://www.thoughtco.com/soviets-change-the-calendar-1779243" target="_blank">Russia used a different calendar</a> than the rest of the Western world. <a href="https://www.thoughtco.com/womens-history-month-3530805" target="_blank">In the 19th century</a>, the Julian calendar, used by Russia, was 12 days behind the Gregorian calendar (used by most of the Western world) until March 1, 1900 when it became 13 days behind. In this timeline, the dates are in the Julian "Old Style," with the Gregorian "New Style" ("NS") date in parentheses, until the change in 1918. Thereafter, all dates are in the Gregorian.</li>
+        </ol>
+      </div>
+</body>
+</html>
