@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The life and times of Dr. Edouard S. Luboff</title>
+  <title>The life and times of Dr. Edouard S. Luboff || Contact form error !!</title>
   <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
   <script src="script.js"></script>
   <!-- HEADER AND TITLE -->
+  <nav>
     <h1>The life and times of Dr. Edouard S. Luboff
     <br><span class="headersubtext">A short history of an economist, a political commentator and journalist, an author and publisher on Russian affairs</span></h1>
   <!-- END OF HEADER AND TITLE -->
-  <!--START OF NAVBAR - EDIT class="current-page/" -->
-    <div class="navbar">
-        <!--Use class "active-page" to highlight current page as per https://stackoverflow.com/questions/26819675/navbar-highlight-for-current-page -->
-      <a href="./index.html">Home</a>
-        <div class="dropdown">
-          <button class="dropbtn">About this page
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <!--Need some conditions to wrap lengthy text-->
-            <a href="./foreword.html">Foreword</a>
-            <a href="#">Context</a>
-            <a href="#">Approach to research</a>
-            <a href="#">Next steps</a>
-            <!-- Here we want another sub-menu for "building the profile" etc-->
+  <!--START OF NAVBAR - EDIT class="active-page" -->
+    <div class="navbar" id="myHeader">
+          <!--Use class "current-page" to highlight current page as per https://stackoverflow.com/questions/26819675/navbar-highlight-for-current-page -->
+        <a href="./index.html">Home</a>
+          <div class="dropdown">
+            <button class="dropbtn">About this page
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <!--Need some conditions to wrap lengthy text-->
+              <a href="./foreword.html">Foreword</a>
+              <a href="./acknowledgements.html">Acknowledgements</a>
+              <a href="./context.html">Context - the Russian Revolution years 1917-1924</a>
+              <a href="./approach.html">Approach to research & next steps</a>
+              <a href="./bibliography.html">Bibliography</a>
+              <!-- Here we want another sub-menu for "building the profile" etc-->
+            </div>
           </div>
+          <div class="dropdown">
+            <button class="dropbtn">Building research
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="./buildingTimeline.html">Building the timeline</a>
+              <a href="./buildingProfile.html">Building the profile</a>
+            </div>
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">Edouard as...
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">...an editor and publisher</a>
-            <a href="#">...an author</a>
-            <a href="#">...a journalist and press correspondent</a>
-            <a href="#">...a public speaker</a>
-            <a href="#">...a family man</a>
-          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Edouard as...
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="./editor.html">...an editor and publisher</a>
+              <a href="./author.html">...an author</a>
+              <a href="./journalist.html">...a journalist and press correspondent</a>
+              <a href="./speaker.html">...a public speaker</a>
+              <a href="./family.html">...a family man</a>
+            </div>
+        </div>
+    <a href="./contact.html" class="current-page">Contact</a>
       </div>
-  <a href="./contact.html" class="current-page">Contact</a>
-    </div>
-<!--END OF NAVBAR -->
+    </nav>
+  <!--END OF NAVBAR -->
   <h1>Oops!</h1>
   <p>Please ensure you have completed all fields before submitting the form. </p>
   <p>Also ensure that there is only one email address.</p>
