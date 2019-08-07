@@ -16,7 +16,7 @@ body {
 h1 {
   font-size: 32px;
   background-image: url("./resources/images/header.jpg");
-  background-color: #d6d2d1;
+  background-color: lightgrey;
   color: black;
   text-align: center;
   /* Replace the below with some min/max heights and some vertical centering, so that h1 smaller is less spaced out..*/
