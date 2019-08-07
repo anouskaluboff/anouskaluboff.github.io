@@ -30,6 +30,29 @@ h1 {
   color: rgba(160,17,47,0.8);
 }
 
+nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgba(160,17,47,0.7);
+  padding: 5px 5px 5px 5px;
+  margin-top: 5px;
+  font-size: 12px;
+/*I am concerned that if I try to align right it cuts off the final 2 characters, perhaps 5px worth?? Have tried amending padding but to no avail.. It seems as though the <body> itself falls off the page - can be seen if setting "margin: 5px 5px 5px 5px;" because no right margin shows..*/
+  text-align: center;
+}
+
+
+/*THIS NEEDS TO BE WHATEVER THE HEIGHT OF THE HEADER AND NAVBAR COMBINED IS*/
+.content {
+  margin-top: 180px;
+}
 
 .navbar {
   overflow: hidden;
@@ -139,8 +162,18 @@ h3 {
   margin: auto;
 }
 
+h4 {
+  font-size: 16px;
+  width: 60%;
+  text-align: justify;
+  padding: 10px;
+  margin: auto;
+  text-decoration: underline;
+}
+
 
 blockquote {
+  font-size: 14px;
   font-style: italic;
   width: 70%;
   text-align: justify;
@@ -195,10 +228,56 @@ th.tdate {
 }
 
 
+th.edSource {
+  width: 17%
+}
 
+th.jToa {
+  width: 33%;
+}
+
+th.auChH {
+  width: 24%;
+}
+
+th.doe {
+  width: 15%;
+}
+
+/* I DON'T CURRENTLY KNOW WHAT I WANT TO DO WITH THIS, BUT THIS CHANGES THE FONT SIZE FROM THE 3rd COLUMN ONWARDS
+Presumably I want to use this to change a column (perhaps make the first in 'Speaker' be smaller..) and then change the following columns back..
+e.g. "table td { background: red;} // first column will have red background table td + td { background: blue;} // rest will have blue"
+
+table td+td+td {
+  font-size: 6px;
+}
+
+table td+td+td+td {
+  font-size: 20px;
+}
+*/
+
+th.auYear {
+  width: 45px;
+}
 
 th {
   background-color:  rgba(160,17,47,0.3);
+}
+
+td {
+  font-size: 14px;
+}
+
+img {
+  /*
+  vertical-align: bottom;
+  vertical-align: middle;
+  vertical-align: top;
+  float: right;
+  float: left;
+  */
+  vertical-align: middle;
 }
 
 
@@ -214,11 +293,6 @@ th {
 
 
 
-
-
-
-
-
 /* Style the header */
 .header {
   padding: 10px 16px;
@@ -229,16 +303,4 @@ th {
 /* Page content */
 .content {
   padding: 16px;
-}
-
-/* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 102px;
 }
