@@ -36,22 +36,11 @@ nav {
   width: 100%;
 }
 
-footer {
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  background-color: rgba(160,17,47,0.7);
-  padding: 5px 5px 5px 5px;
-  margin-top: 5px;
-  font-size: 12px;
-/*I am concerned that if I try to align right it cuts off the final 2 characters, perhaps 5px worth?? Have tried amending padding but to no avail.. It seems as though the <body> itself falls off the page - can be seen if setting "margin: 5px 5px 5px 5px;" because no right margin shows..*/
-  text-align: center;
-}
-
 
 /*THIS NEEDS TO BE WHATEVER THE HEIGHT OF THE HEADER AND NAVBAR COMBINED IS*/
 .content {
   margin-top: 180px;
+  /* DID THIS IN CASE IT FIXED STICKY FOOTER - IT DIDN'T*/  margin-bottom: 10px;
 }
 
 .navbar {
@@ -291,6 +280,23 @@ img {
 
 /* FOOTER */
 
+
+footer {
+  /*position: fixed; || Always visible, on short pages is still at bottom of page, starts and stays at bottom of page, stays at bottom on scroll, the end of the text goes underneath it.*/
+  /* position: sticky; || Always visible, on short pages is just under content, when long page it stays at bottom of page, but the end of the text goes underneath it.*/
+  /*position: absolute; || Always visible, on short pages is still at bottom of page, starts at bottom of page, scrolls up with text!, the end of the text goes underneath it.*/
+  /*position: relative; || On short pages is just under content, just appears at the bottom of the page content no matter where it is!*/
+  /*position: static;  || On short pages is just under content, just appears at the bottom of the page content no matter where it is!*/
+  position: fixed;
+  bottom: 0px;
+  width: 99%;
+  background-color: rgba(160,17,47,0.7);
+  padding: 5px 5px 5px 5px;
+  margin-top: 5px;
+  font-size: 12px;
+/*I am concerned that if I try to align right it cuts off the final 2 characters, perhaps 5px worth?? Have tried amending padding but to no avail.. It seems as though the <body> itself falls off the page - can be seen if setting "margin: 5px 5px 5px 5px;" because no right margin shows..*/
+  text-align: center;
+}
 
 
 /* Style the header */
